@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VELOCITY X — Experience The Future of Driving</title>
+<meta name="description" content="VELOCITY X is a futuristic luxury automotive showroom. Explore supercars, EVs and grand tourers, compare machines and book a test drive." />
+<meta name="theme-color" content="#05070d" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2338e8ff'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M8 14h12l10 26 10-26h12L36 54H28z' fill='url(%23g)'/%3E%3C/svg%3E" />
+<link rel="preload" href="assets/fonts/orbitron-900.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="assets/fonts/fonts.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ SVG ICON SPRITE ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1116 0"/><path d="M12 18l4-6"/><circle cx="12" cy="18" r="1.6"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></symbol>
+  <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9l4-6z"/><path d="M2 9h20M9 3l3 6 3-6M12 21l-3-12M12 21l3-12"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4"/><path d="M2.5 21a6.5 6.5 0 0113 0"/><path d="M16 5.2a3.4 3.4 0 010 6.2M21.5 21a6.5 6.5 0 00-4.5-6.2"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 011-1h8l9 9-9 9-9-9z"/><circle cx="8" cy="8" r="1.6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9 2.9-6z"/></symbol>
+  <symbol id="i-compare" viewBox="0 0 24 24"><path d="M8 3v18M16 3v18M3 8h5M16 8h5M3 16h5M16 16h5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 006 6L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-wheel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5l11 7-11 7V5z"/></symbol>
+  <symbol id="i-social-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></symbol>
+  <symbol id="i-social-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 11v5M8 8v.01M12 16v-3a2 2 0 014 0v3"/></symbol>
+  <symbol id="i-social-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5l5 2.5-5 2.5v-5z"/></symbol>
+  <symbol id="i-social-fb" viewBox="0 0 24 24"><path d="M15 3h-3a4 4 0 00-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 011-1h3V3z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 3v6.5c0 5-3.4 8.7-8 10.5-4.6-1.8-8-5.5-8-10.5V5l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/><path d="M18 15l.9 2.6L21.5 18l-2.6.9L18 21.5 17.1 19 14.5 18l2.6-.9L18 15z"/></symbol>
+</svg>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__inner">
+    <div class="preloader__logo">
+      <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#38e8ff"/><stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 12h13l11 27 11-27h13L36 60h-8L4 12z" fill="url(#lg1)"/>
+        <path d="M4 12h13l11 27 11-27h13L36 60h-8L4 12z" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="1"/>
+      </svg>
+      <span class="preloader__word">VELOCITY<em>X</em></span>
+    </div>
+    <div class="preloader__bar"><span id="loadBar"></span></div>
+    <div class="preloader__pct"><span id="loadPct">0</span>%</div>
+    <p class="preloader__txt">PREPARING THE SHOWROOM</p>
+  </div>
+  <div class="preloader__glow"></div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="logo" aria-label="VELOCITY X — home">
+      <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true">
+        <use href="#lg1" />
+        <path d="M4 12h13l11 27 11-27h13L36 60h-8L4 12z" fill="url(#lg1)"/>
+      </svg>
+      <span class="logo__text">VELOCITY<em>X</em></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
+      <a href="#home" class="nav__link is-active">Home</a>
+      <a href="#cars" class="nav__link">Explore Cars</a>
+      <a href="#categories" class="nav__link">Categories</a>
+      <a href="#compare" class="nav__link">Compare Cars</a>
+      <a href="#offers" class="nav__link">Offers</a>
+      <a href="#about" class="nav__link">About Us</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" id="searchBtn" type="button" aria-label="Search cars">
+        <svg class="ic"><use href="#i-search"/></svg>
+      </button>
+      <a href="#test-drive" class="btn btn--neon btn--sm nav__cta">
+        <span>Book a Test Drive</span>
+        <svg class="ic"><use href="#i-arrow"/></svg>
+      </a>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="orb orb--cyan"></div>
+      <div class="orb orb--violet"></div>
+      <div class="orb orb--amber"></div>
+      <div class="hero__grid"></div>
+      <div class="hero__noise"></div>
+    </div>
+
+    <canvas id="hero-canvas" class="hero__canvas" aria-label="Interactive 3D supercar — drag to rotate"></canvas>
+
+    <div class="hero__streaks" aria-hidden="true">
+      <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span>
+      <span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span>
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--hero reveal" data-delay="0">
+        <span class="eyebrow__dot"></span> The Future of Driving is Here
+      </p>
+      <h1 class="hero__title">
+        <span class="line"><span class="line__in">DRIVE</span></span>
+        <span class="line"><span class="line__in"><span class="stroke">BEYOND</span> <span class="grad">LIMITS.</span></span></span>
+      </h1>
+      <p class="hero__sub reveal" data-delay="220">
+        Discover extraordinary machines engineered for tomorrow — the world's most advanced
+        automobiles, together in one cinematic showroom.
+      </p>
+      <div class="hero__cta reveal" data-delay="340">
+        <a href="#cars" class="btn btn--primary">
+          <span>Explore Collection</span>
+          <svg class="ic"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#test-drive" class="btn btn--ghost">
+          <svg class="ic ic--s"><use href="#i-play"/></svg>
+          <span>Book a Test Drive</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__specs" aria-hidden="true">
+      <div class="spec-float spec-float--1 tilt" data-tilt-max="8">
+        <span class="spec-float__ico"><svg class="ic"><use href="#i-bolt"/></svg></span>
+        <span class="spec-float__val"><b data-counter="1001">0</b><i>hp</i></span>
+        <span class="spec-float__lbl">Hybrid Power</span>
+      </div>
+      <div class="spec-float spec-float--2 tilt" data-tilt-max="8">
+        <span class="spec-float__ico"><svg class="ic"><use href="#i-gauge"/></svg></span>
+        <span class="spec-float__val"><b data-counter="350">0</b><i>km/h</i></span>
+        <span class="spec-float__lbl">Top Speed</span>
+      </div>
+      <div class="spec-float spec-float--3 tilt" data-tilt-max="8">
+        <span class="spec-float__ico"><svg class="ic"><use href="#i-timer"/></svg></span>
+        <span class="spec-float__val"><b data-counter="2.5" data-decimals="1">0.0</b><i>s</i></span>
+        <span class="spec-float__lbl">0–100 km/h</span>
+      </div>
+    </div>
+
+    <div class="hero__hint" aria-hidden="true">
+      <span class="hero__hint-icon"><svg class="ic"><use href="#i-wheel"/></svg></span>
+      Drag to rotate · Move mouse for parallax
+    </div>
+
+    <a class="hero__scroll" href="#categories" aria-label="Scroll to categories">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-txt">SCROLL</span>
+    </a>
+  </section>
+
+  <!-- ============ BRAND MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span>Lamborghini</span><i>✦</i><span>Ferrari</span><i>✦</i><span>Porsche</span><i>✦</i>
+        <span>McLaren</span><i>✦</i><span>BMW M</span><i>✦</i><span>Mercedes-AMG</span><i>✦</i>
+        <span>Tesla</span><i>✦</i><span>Audi Sport</span><i>✦</i>
+      </div>
+      <div class="marquee__group" aria-hidden="true">
+        <span>Lamborghini</span><i>✦</i><span>Ferrari</span><i>✦</i><span>Porsche</span><i>✦</i>
+        <span>McLaren</span><i>✦</i><span>BMW M</span><i>✦</i><span>Mercedes-AMG</span><i>✦</i>
+        <span>Tesla</span><i>✦</i><span>Audi Sport</span><i>✦</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section categories" id="categories">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__dot"></span> Curated Collections</p>
+        <h2 class="h2">FIND YOUR <span class="grad">SIGNATURE</span> MACHINE</h2>
+        <p class="section-head__p">Six distinct worlds of automotive excellence. Each one engineered around a different idea of perfection.</p>
+      </header>
+
+      <div class="cat-grid">
+        <article class="cat-card tilt" data-reveal data-cat="supercars" style="--accent:#ff7a18">
+          <div class="cat-card__media"><img src="assets/images/cat-supercars.jpg" alt="Orange Lamborghini Revuelto supercar in a dark studio" loading="lazy" width="1100" height="760" /></div>
+          <div class="cat-card__body">
+            <span class="cat-card__num">01</span>
+            <h3 class="cat-card__title">Supercars</h3>
+            <p class="cat-card__p">The absolute limit of performance. Carbon, hybrid V12s and aero forged in the wind tunnel.</p>
+            <span class="link-arrow">Explore <svg class="ic"><use href="#i-up-right"/></svg></span>
+          </div>
+        </article>
+
+        <article class="cat-card tilt" data-reveal data-cat="luxury" style="--accent:#8b5cf6">
+          <div class="cat-card__media"><img src="assets/images/cat-luxury.jpg" alt="Silver Mercedes-AMG GT luxury grand tourer" loading="lazy" width="1100" height="760" /></div>
+          <div class="cat-card__body">
+            <span class="cat-card__num">02</span>
+            <h3 class="cat-card__title">Luxury Cars</h3>
+            <p class="cat-card__p">Hand-stitched cabins, silent torque and presence that turns every arrival into an event.</p>
+            <span class="link-arrow">Explore <svg class="ic"><use href="#i-up-right"/></svg></span>
+          </div>
+        </article>
+
+        <article class="cat-card tilt" data-reveal data-cat="sports" style="--accent:#38e8ff">
+          <div class="cat-card__media"><img src="assets/images/cat-sports.jpg" alt="White McLaren 750S Spider sports car" loading="lazy" width="1100" height="760" /></div>
+          <div class="cat-card__body">
+            <span class="cat-card__num">03</span>
+            <h3 class="cat-card__title">Sports Cars</h3>
+            <p class="cat-card__p">Precision instruments built for the corner, the apex and the perfect downshift.</p>
+            <span class="link-arrow">Explore <svg class="ic"><use href="#i-up-right"/></svg></span>
+          </div>
+        </article>
+
+        <article class="cat-card tilt" data-reveal data-cat="electric" style="--accent:#5ef0c0">
+          <div class="cat-card__media"><img src="assets/images/cat-electric.jpg" alt="Tesla Model S electric performance sedan" loading="lazy" width="1100" height="760" /></div>
+          <div class="cat-card__body">
+            <span class="cat-card__num">04</span>
+            <h3 class="cat-card__title">Electric Vehicles</h3>
+            <p class="cat-card__p">Instant torque, zero emissions and software that keeps getting sharper overnight.</p>
+            <span class="link-arrow">Explore <svg class="ic"><use href="#i-up-right"/></svg></span>
+          </div>
+        </article>
+
+        <article class="cat-card tilt" data-reveal data-cat="suv" style="--accent:#ffc65c">
+          <div class="cat-card__media"><img src="assets/images/cat-suv.jpg" alt="Black Brabus G-Class luxury SUV" loading="lazy" width="1100" height="760" /></div>
+          <div class="cat-card__body">
+            <span class="cat-card__num">05</span>
+            <h3 class="cat-card__title">SUVs</h3>
+            <p class="cat-card__p">Commanding stance, limousine comfort and the confidence to go absolutely anywhere.</p>
+            <span class="link-arrow">Explore <svg class="ic"><use href="#i-up-right"/></svg></span>
+          </div>
+        </article>
+
+        <article class="cat-card tilt" data-reveal data-cat="sedan" style="--accent:#ff5470">
+          <div class="cat-card__media"><img src="assets/images/cat-sedan.jpg" alt="Black luxury sedan in a dark studio" loading="lazy" width="1100" height="760" /></div>
+          <div class="cat-card__body">
+            <span class="cat-card__num">06</span>
+            <h3 class="cat-card__title">Sedans</h3>
+            <p class="cat-card__p">The executive expression of speed — four doors, endless refinement, no compromise.</p>
+            <span class="link-arrow">Explore <svg class="ic"><use href="#i-up-right"/></svg></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED CARS ============ -->
+  <section class="section cars" id="cars">
+    <div class="wrap">
+      <header class="section-head section-head--row" data-reveal>
+        <div>
+          <p class="eyebrow"><span class="eyebrow__dot"></span> The Collection</p>
+          <h2 class="h2">NINE MACHINES.<br><span class="grad">ZERO COMPROMISE.</span></h2>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filter cars">
+          <button class="chip is-active" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="supercar" type="button">Supercars</button>
+          <button class="chip" data-filter="sports" type="button">Sports</button>
+          <button class="chip" data-filter="grand-tourer" type="button">Grand Tourers</button>
+          <button class="chip" data-filter="electric" type="button">Electric</button>
+          <button class="chip" data-filter="sedan" type="button">Sedans</button>
+          <button class="chip" data-filter="suv" type="button">SUVs</button>
+        </div>
+      </header>
+
+      <div class="car-grid" id="carGrid"><!-- rendered by script.js --></div>
+      <p class="car-grid__empty" id="gridEmpty" hidden>No machines match this filter.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3D SHOWCASE ============ -->
+  <section class="section showcase" id="showcase">
+    <div class="showcase__bg" aria-hidden="true">
+      <div class="showcase__ring"></div>
+      <div class="showcase__ring showcase__ring--2"></div>
+      <div class="showcase__grid"></div>
+    </div>
+
+    <div class="wrap">
+      <header class="section-head section-head--center" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__dot"></span> 360° Interactive Studio</p>
+        <h2 class="h2">ENGINEERED TO <span class="grad">PERFECTION.</span></h2>
+        <p class="section-head__p">Drag the car to orbit. Scroll to zoom. Use the swatches to repaint the body — every angle reveals another obsession.</p>
+      </header>
+
+      <div class="showcase__stage" data-reveal>
+        <canvas id="showcase-canvas" aria-label="Interactive 3D car — drag to rotate, scroll to zoom"></canvas>
+        <div class="showcase__hint"><svg class="ic"><use href="#i-wheel"/></svg> Drag to orbit · Scroll to zoom</div>
+
+        <button class="hotspot" type="button" style="--x:31%;--y:50%" data-title="Carbon Monocoque" data-text="A full carbon-fibre tub keeps mass at 1,550 kg and stiffness at 31,000 Nm/deg.">
+          <span class="hotspot__dot"></span><span class="hotspot__pulse"></span>
+        </button>
+        <button class="hotspot" type="button" style="--x:67%;--y:44%" data-title="Aero Blade" data-text="Active aerodynamics generate 480 kg of downforce at 250 km/h.">
+          <span class="hotspot__dot"></span><span class="hotspot__pulse"></span>
+        </button>
+        <button class="hotspot" type="button" style="--x:54%;--y:76%" data-title="Centre-Lock Forged Wheels" data-text="21-inch forged magnesium wheels with carbon-ceramic brakes.">
+          <span class="hotspot__dot"></span><span class="hotspot__pulse"></span>
+        </button>
+        <div class="hotspot__tip" id="hotspotTip" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="showcase__panel" data-reveal>
+        <div class="showcase__panel-head">
+          <div>
+            <span class="panel-kicker">VELOCITY X · STUDIO EDITION</span>
+            <h3 class="panel-title">Aerodynamic Sculpture</h3>
+          </div>
+          <div class="swatches" id="swatches" role="group" aria-label="Body colour">
+            <button class="swatch is-active" type="button" data-color="#c8102e" style="--c:#c8102e" aria-label="Rosso Corsa" aria-pressed="true"></button>
+            <button class="swatch" type="button" data-color="#0b57d0" style="--c:#0b57d0" aria-label="Blu Corsa"></button>
+            <button class="swatch" type="button" data-color="#e8e8ea" style="--c:#e8e8ea" aria-label="Bianco"></button>
+            <button class="swatch" type="button" data-color="#151518" style="--c:#151518" aria-label="Nero"></button>
+            <button class="swatch" type="button" data-color="#ff7a18" style="--c:#ff7a18" aria-label="Arancio"></button>
+            <button class="swatch" type="button" data-color="#3ad0a8" style="--c:#3ad0a8" aria-label="Verde"></button>
+          </div>
+        </div>
+        <ul class="tech-list">
+          <li class="tech-list__item">
+            <span class="tech-list__ico"><svg class="ic"><use href="#i-bolt"/></svg></span>
+            <div><span class="tech-list__k">Power</span><span class="tech-list__v"><b data-counter="620">0</b> CV</span></div>
+            <span class="tech-list__bar"><i style="--w:86%"></i></span>
+          </li>
+          <li class="tech-list__item">
+            <span class="tech-list__ico"><svg class="ic"><use href="#i-gauge"/></svg></span>
+            <div><span class="tech-list__k">Top Speed</span><span class="tech-list__v"><b data-counter="331">0</b> km/h</span></div>
+            <span class="tech-list__bar"><i style="--w:78%"></i></span>
+          </li>
+          <li class="tech-list__item">
+            <span class="tech-list__ico"><svg class="ic"><use href="#i-timer"/></svg></span>
+            <div><span class="tech-list__k">0–100 km/h</span><span class="tech-list__v"><b data-counter="3.1" data-decimals="1">0.0</b> s</span></div>
+            <span class="tech-list__bar"><i style="--w:92%"></i></span>
+          </li>
+          <li class="tech-list__item">
+            <span class="tech-list__ico"><svg class="ic"><use href="#i-shield"/></svg></span>
+            <div><span class="tech-list__k">Downforce</span><span class="tech-list__v"><b data-counter="480">0</b> kg</span></div>
+            <span class="tech-list__bar"><i style="--w:70%"></i></span>
+          </li>
+        </ul>
+        <div class="showcase__cta">
+          <a href="#test-drive" class="btn btn--primary"><span>Book a Test Drive</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+          <button class="btn btn--ghost" type="button" id="resetView"><svg class="ic ic--s"><use href="#i-wheel"/></svg><span>Reset View</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARE ============ -->
+  <section class="section compare" id="compare">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__dot"></span> Head to Head</p>
+        <h2 class="h2">COMPARE THE <span class="grad">EXTRAORDINARY.</span></h2>
+        <p class="section-head__p">Pick two or three machines and see how the numbers stack up — the best value in every row is highlighted.</p>
+      </header>
+
+      <div class="compare__picker" data-reveal>
+        <div class="compare__slots" id="compareSlots">
+          <div class="compare__slot" data-slot="0">
+            <label class="field__label" for="cmp0">Slot 01</label>
+            <select id="cmp0" class="select"></select>
+          </div>
+          <div class="compare__slot" data-slot="1">
+            <label class="field__label" for="cmp1">Slot 02</label>
+            <select id="cmp1" class="select"></select>
+          </div>
+          <div class="compare__slot" data-slot="2">
+            <label class="field__label" for="cmp2">Slot 03 <span class="optional">optional</span></label>
+            <select id="cmp2" class="select"></select>
+          </div>
+        </div>
+        <div class="compare__actions">
+          <button class="btn btn--primary" type="button" id="compareNow"><span>Compare Now</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+          <button class="btn btn--ghost" type="button" id="clearCompare"><span>Clear Comparison</span></button>
+        </div>
+      </div>
+
+      <div class="compare__table-wrap" id="compareWrap" data-reveal>
+        <p class="compare__empty" id="compareEmpty">Select at least two cars above, then press “Compare Now”.</p>
+        <div class="compare__table-scroll" id="compareTableScroll" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OFFERS ============ -->
+  <section class="section offers" id="offers">
+    <div class="offers__bg" aria-hidden="true">
+      <img src="assets/images/bg-showroom.jpg" alt="" loading="lazy" width="1920" height="1080" />
+      <div class="offers__scrim"></div>
+    </div>
+    <div class="wrap">
+      <header class="section-head section-head--center" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__dot"></span> Limited Period Privileges</p>
+        <h2 class="h2">YOUR DREAM CAR IS<br><span class="grad">CLOSER THAN EVER.</span></h2>
+        <p class="section-head__p">Curated benefits for a very limited window. Ask our specialists for the full terms.</p>
+      </header>
+
+      <div class="offer-grid">
+        <article class="offer tilt" data-reveal style="--accent:#38e8ff">
+          <span class="offer__tag">FINANCE</span>
+          <h3 class="offer__title">Low-Down<br />Financing</h3>
+          <p class="offer__big">8.5%<span>annual</span></p>
+          <p class="offer__p">Custom-tailored EMIs up to 7 years with instant approval for select profiles.</p>
+          <span class="link-arrow">Explore Offers <svg class="ic"><use href="#i-up-right"/></svg></span>
+        </article>
+        <article class="offer offer--hot tilt" data-reveal style="--accent:#ff7a18">
+          <span class="offer__tag">LIMITED TIME</span>
+          <h3 class="offer__title">Showroom<br />Discount</h3>
+          <p class="offer__big">₹4.5L<span>benefit</span></p>
+          <p class="offer__p">Up to ₹4.5 lakh off on selected 2024 registrations, only until stock lasts.</p>
+          <span class="link-arrow">Explore Offers <svg class="ic"><use href="#i-up-right"/></svg></span>
+        </article>
+        <article class="offer tilt" data-reveal style="--accent:#8b5cf6">
+          <span class="offer__tag">EXCHANGE</span>
+          <h3 class="offer__title">Exchange<br />Bonus</h3>
+          <p class="offer__big">₹2L<span>extra</span></p>
+          <p class="offer__p">Trade in any make for a guaranteed exchange bonus plus free RC transfer.</p>
+          <span class="link-arrow">Explore Offers <svg class="ic"><use href="#i-up-right"/></svg></span>
+        </article>
+        <article class="offer tilt" data-reveal style="--accent:#5ef0c0">
+          <span class="offer__tag">EXCLUSIVE</span>
+          <h3 class="offer__title">Velocity<br />Concierge</h3>
+          <p class="offer__big">24/7<span>support</span></p>
+          <p class="offer__p">Complimentary doorstep test drives, detailing and pick-up for every service.</p>
+          <span class="link-arrow">Explore Offers <svg class="ic"><use href="#i-up-right"/></svg></span>
+        </article>
+      </div>
+
+      <div class="offers__cta" data-reveal>
+        <a href="#test-drive" class="btn btn--primary"><span>Claim an Offer</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <span class="offers__note">Offers are indicative &amp; subject to eligibility. T&amp;C apply.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEST DRIVE ============ -->
+  <section class="section booking" id="test-drive">
+    <div class="wrap booking__grid">
+      <div class="booking__intro" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__dot"></span> Behind the Wheel</p>
+        <h2 class="h2">FEEL IT<br /><span class="grad">IN PERSON.</span></h2>
+        <p class="booking__lead">Thirty minutes. One machine. No obligation. Tell us where and when — our concierge brings the car to you.</p>
+
+        <ul class="booking__points">
+          <li><span class="pt-ico"><svg class="ic"><use href="#i-pin"/></svg></span><div><b>4 showrooms</b><span>Vijayawada · Hyderabad · Bengaluru · Vizag</span></div></li>
+          <li><span class="pt-ico"><svg class="ic"><use href="#i-phone"/></svg></span><div><b>+91 98765 43210</b><span>Mon–Sun, 9:00 – 21:00</span></div></li>
+          <li><span class="pt-ico"><svg class="ic"><use href="#i-mail"/></svg></span><div><b>drive@velocityx.in</b><span>Replies within 2 hours</span></div></li>
+        </ul>
+
+        <div class="booking__badge">
+          <span class="booking__badge-ico"><svg class="ic"><use href="#i-shield"/></svg></span>
+          <div><b>Fully insured drives</b><span>Professional instructor on request · No cost, no commitment</span></div>
+        </div>
+      </div>
+
+      <div class="booking__card glass" data-reveal>
+        <div class="booking__card-head">
+          <h3>Book a Test Drive</h3>
+          <span class="badge-demo">DEMO BOOKING</span>
+        </div>
+
+        <form class="form" id="bookingForm" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="fName">Customer name</label>
+              <input class="field__input" id="fName" name="name" type="text" placeholder="Your full name" autocomplete="name" required minlength="3" />
+              <span class="field__err" data-err="name"></span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="fEmail">Email address</label>
+              <input class="field__input" id="fEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+              <span class="field__err" data-err="email"></span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="fPhone">Phone number</label>
+              <input class="field__input" id="fPhone" name="phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" required />
+              <span class="field__err" data-err="phone"></span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="fCar">Car model</label>
+              <select class="field__input" id="fCar" name="car" required>
+                <option value="">Select a machine</option>
+              </select>
+              <span class="field__err" data-err="car"></span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="fDate">Preferred date</label>
+              <input class="field__input" id="fDate" name="date" type="date" required />
+              <span class="field__err" data-err="date"></span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="fTime">Preferred time</label>
+              <select class="field__input" id="fTime" name="time" required>
+                <option value="">Select a time</option>
+                <option>09:00 – 10:00</option><option>10:00 – 11:00</option><option>11:00 – 12:00</option>
+                <option>12:00 – 13:00</option><option>14:00 – 15:00</option><option>15:00 – 16:00</option>
+                <option>16:00 – 17:00</option><option>17:00 – 18:00</option><option>18:00 – 19:00</option>
+              </select>
+              <span class="field__err" data-err="time"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="fLoc">Preferred showroom</label>
+            <select class="field__input" id="fLoc" name="location" required>
+              <option value="">Select a showroom</option>
+              <option>Velocity X · Vijayawada — MG Road</option>
+              <option>Velocity X · Hyderabad — Banjara Hills</option>
+              <option>Velocity X · Bengaluru — Lavelle Road</option>
+              <option>Velocity X · Vizag — Beach Road</option>
+            </select>
+            <span class="field__err" data-err="location"></span>
+          </div>
+
+          <button class="btn btn--neon btn--block" type="submit" id="bookingSubmit">
+            <span>Submit Booking</span>
+            <svg class="ic"><use href="#i-arrow"/></svg>
+          </button>
+
+          <p class="form__note">This is a demonstration form. No real booking is created unless a backend is connected.</p>
+        </form>
+
+        <div class="booking__success" id="bookingSuccess" hidden role="status" aria-live="polite">
+          <span class="booking__success-ico"><svg class="ic"><use href="#i-check"/></svg></span>
+          <h4>Request received</h4>
+          <p id="bookingSummary">Our concierge will confirm your slot shortly.</p>
+          <button class="btn btn--ghost btn--sm" type="button" id="bookAnother">Book another test drive</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE ============ -->
+  <section class="section why" id="why">
+    <div class="wrap">
+      <header class="section-head section-head--center" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__dot"></span> The Velocity X Standard</p>
+        <h2 class="h2">WHY <span class="grad">VELOCITY X?</span></h2>
+        <p class="section-head__p">Four promises that turn a purchase into an experience worth repeating.</p>
+      </header>
+
+      <div class="why-grid">
+        <article class="why-card tilt" data-reveal style="--accent:#38e8ff">
+          <span class="why-card__ico"><svg class="ic"><use href="#i-gem"/></svg></span>
+          <h3>Premium Collection</h3>
+          <p>Discover world-class automobiles — hand-picked, inspected and certified by people who obsess over them.</p>
+          <span class="why-card__line"></span>
+        </article>
+        <article class="why-card tilt" data-reveal style="--accent:#8b5cf6">
+          <span class="why-card__ico"><svg class="ic"><use href="#i-users"/></svg></span>
+          <h3>Expert Guidance</h3>
+          <p>Get assistance from automotive specialists who have driven every car on this floor — on track, not just on paper.</p>
+          <span class="why-card__line"></span>
+        </article>
+        <article class="why-card tilt" data-reveal style="--accent:#ff7a18">
+          <span class="why-card__ico"><svg class="ic"><use href="#i-tag"/></svg></span>
+          <h3>Exclusive Offers</h3>
+          <p>Access special showroom deals, exchange bonuses and privilege pricing reserved for the Velocity X circle.</p>
+          <span class="why-card__line"></span>
+        </article>
+        <article class="why-card tilt" data-reveal style="--accent:#5ef0c0">
+          <span class="why-card__ico"><svg class="ic"><use href="#i-spark"/></svg></span>
+          <h3>Premium Experience</h3>
+          <p>Experience luxury beyond expectations — private viewings, concierge deliveries and a lifetime of support.</p>
+          <span class="why-card__line"></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="wrap about__grid">
+      <div class="about__media" data-reveal>
+        <img src="assets/images/bg-garage.jpg" alt="Inside the Velocity X flagship showroom at night" loading="lazy" width="1920" height="1080" />
+        <div class="about__media-frame"></div>
+        <div class="about__floating">
+          <span class="about__floating-k">EST. 2012</span>
+          <span class="about__floating-v">12 Years of Velocity</span>
+        </div>
+      </div>
+
+      <div class="about__content" data-reveal>
+        <p class="eyebrow"><span class="eyebrow__dot"></span> About Velocity X</p>
+        <h2 class="h2">BUILT FOR THOSE<br /><span class="grad">WHO ARRIVE FIRST.</span></h2>
+        <p class="about__p">Velocity X began in 2012 with a single bay in Vijayawada and a stubborn belief: that buying an extraordinary car should feel as extraordinary as driving one. Today our four flagship showrooms house some of the rarest machines in the country.</p>
+        <p class="about__p">Every car is sourced, inspected and re-commissioned in-house. Every client gets a specialist, a detailer and a direct line to the person who sold them the car — for as long as they own it.</p>
+
+        <div class="stats">
+          <div class="stat"><span class="stat__v"><b data-counter="1200">0</b>+</span><span class="stat__k">Cars Delivered</span></div>
+          <div class="stat"><span class="stat__v"><b data-counter="48">0</b></span><span class="stat__k">Elite Brands</span></div>
+          <div class="stat"><span class="stat__v"><b data-counter="12">0</b>+</span><span class="stat__k">Years of Trust</span></div>
+          <div class="stat"><span class="stat__v"><b data-counter="4.9" data-decimals="1">0.0</b>★</span><span class="stat__k">Client Rating</span></div>
+        </div>
+
+        <a href="#cars" class="btn btn--ghost"><span>Meet the Collection</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials" id="testimonials">
+    <div class="wrap">
+      <header class="section-head section-head--row" data-reveal>
+        <div>
+          <p class="eyebrow"><span class="eyebrow__dot"></span> Client Stories</p>
+          <h2 class="h2">WORDS FROM<br /><span class="grad">THE DRIVER'S SEAT.</span></h2>
+        </div>
+        <div class="carousel__nav">
+          <button class="round-btn" id="prevSlide" type="button" aria-label="Previous testimonial"><svg class="ic ic--s" style="transform:rotate(180deg)"><use href="#i-chevron"/></svg></button>
+          <button class="round-btn" id="nextSlide" type="button" aria-label="Next testimonial"><svg class="ic ic--s"><use href="#i-chevron"/></svg></button>
+        </div>
+      </header>
+
+      <div class="carousel" id="carousel" data-reveal>
+        <div class="carousel__track" id="carouselTrack">
+          <figure class="t-card">
+            <div class="t-card__stars" aria-label="Rated 5 out of 5">
+              <svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>“The Revuelto was delivered to my doorstep in Hyderabad, detailed and full. No haggling, no theatre — just a team that knows these cars better than anyone.”</blockquote>
+            <figcaption class="t-card__who">
+              <img src="assets/images/avatar-1.jpg" alt="Portrait of Arjun Reddy" loading="lazy" width="96" height="96" />
+              <div><b>Arjun Reddy</b><span>Entrepreneur · Hyderabad</span></div>
+            </figcaption>
+          </figure>
+
+          <figure class="t-card">
+            <div class="t-card__stars" aria-label="Rated 5 out of 5">
+              <svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>“I walked in for a 911 and left with a completely different plan. Their specialist spent three hours with me. That patience is why I have bought twice since.”</blockquote>
+            <figcaption class="t-card__who">
+              <img src="assets/images/avatar-3.jpg" alt="Portrait of Meera Iyer" loading="lazy" width="96" height="96" />
+              <div><b>Meera Iyer</b><span>Architect · Bengaluru</span></div>
+            </figcaption>
+          </figure>
+
+          <figure class="t-card">
+            <div class="t-card__stars" aria-label="Rated 5 out of 5">
+              <svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>“Financing was sorted over a single phone call and the exchange bonus on my old M4 was better than any aggregator quote. Genuine, transparent, fast.”</blockquote>
+            <figcaption class="t-card__who">
+              <img src="assets/images/avatar-2.jpg" alt="Portrait of Vikram Nair" loading="lazy" width="96" height="96" />
+              <div><b>Vikram Nair</b><span>Surgeon · Vijayawada</span></div>
+            </figcaption>
+          </figure>
+
+          <figure class="t-card">
+            <div class="t-card__stars" aria-label="Rated 5 out of 5">
+              <svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>“The Model S test drive happened at my office. Twenty minutes later I understood the hype. Delivery, paperwork, charger installation — all handled before the weekend.”</blockquote>
+            <figcaption class="t-card__who">
+              <img src="assets/images/avatar-4.jpg" alt="Portrait of Ananya Rao" loading="lazy" width="96" height="96" />
+              <div><b>Ananya Rao</b><span>Product Lead · Vizag</span></div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Choose testimonial"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="section newsletter" id="newsletter">
+    <div class="newsletter__bg" aria-hidden="true">
+      <img src="assets/images/bg-streaks.jpg" alt="" loading="lazy" width="1920" height="1080" />
+      <div class="newsletter__scrim"></div>
+      <div class="newsletter__beam"></div>
+    </div>
+    <div class="wrap newsletter__inner" data-reveal>
+      <div class="newsletter__copy">
+        <p class="eyebrow"><span class="eyebrow__dot"></span> The Inner Circle</p>
+        <h2 class="h2">STAY AHEAD<br /><span class="grad">OF THE CURVE.</span></h2>
+        <p>New launches, private preview invitations, exclusive offers and straight-talking automotive updates. One email a month. No noise.</p>
+      </div>
+      <form class="newsletter__form" id="newsletterForm" novalidate>
+        <label class="sr-only" for="nlEmail">Email address</label>
+        <input class="newsletter__input" id="nlEmail" type="email" placeholder="Enter your email address" autocomplete="email" required />
+        <button class="btn btn--neon" type="submit"><span>Subscribe</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        <p class="newsletter__msg" id="nlMsg" role="status" aria-live="polite"></p>
+        <p class="newsletter__legal">By subscribing you agree to our privacy policy. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="footer__glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="logo" aria-label="VELOCITY X — home">
+          <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true">
+            <path d="M4 12h13l11 27 11-27h13L36 60h-8L4 12z" fill="url(#lg1)"/>
+          </svg>
+          <span class="logo__text">VELOCITY<em>X</em></span>
+        </a>
+        <p class="footer__p">Experience the future of driving. A curated house of the world's most advanced automobiles, with showrooms across Andhra Pradesh, Telangana and Karnataka.</p>
+        <div class="footer__social">
+          <a href="#" class="social" aria-label="Instagram"><svg class="ic"><use href="#i-social-in"/></svg></a>
+          <a href="#" class="social" aria-label="X"><svg class="ic"><use href="#i-social-x"/></svg></a>
+          <a href="#" class="social" aria-label="YouTube"><svg class="ic"><use href="#i-social-yt"/></svg></a>
+          <a href="#" class="social" aria-label="Facebook"><svg class="ic"><use href="#i-social-fb"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Quick navigation">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#cars">Explore Cars</a>
+        <a href="#categories">Categories</a>
+        <a href="#compare">Compare Cars</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About Us</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Car categories">
+        <h4>Categories</h4>
+        <a href="#categories" data-cat-link="supercars">Supercars</a>
+        <a href="#categories" data-cat-link="luxury">Luxury Cars</a>
+        <a href="#categories" data-cat-link="sports">Sports Cars</a>
+        <a href="#categories" data-cat-link="electric">Electric Vehicles</a>
+        <a href="#categories" data-cat-link="suv">SUVs</a>
+        <a href="#categories" data-cat-link="sedan">Sedans</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Support</h4>
+        <a href="#test-drive">Book a Test Drive</a>
+        <a href="#test-drive">Book a Service</a>
+        <a href="#offers">Exchange Bonus</a>
+        <a href="#contact">Insurance</a>
+        <a href="#contact">FAQs</a>
+      </div>
+
+      <div class="footer__col footer__contact">
+        <h4>Contact</h4>
+        <p><svg class="ic ic--s"><use href="#i-pin"/></svg><span>Plot 42, MG Road,<br />Vijayawada, Andhra Pradesh 520010</span></p>
+        <p><svg class="ic ic--s"><use href="#i-phone"/></svg><a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><svg class="ic ic--s"><use href="#i-mail"/></svg><a href="mailto:drive@velocityx.in">drive@velocityx.in</a></p>
+        <p class="footer__hours"><svg class="ic ic--s"><use href="#i-timer"/></svg><span>Mon – Sun · 9:00 – 21:00</span></p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> VELOCITY X MOTORS PRIVATE LIMITED. ALL RIGHTS RESERVED.</p>
+      <div class="footer__legal">
+        <a href="#">Privacy Policy</a><span>·</span><a href="#">Terms of Use</a><span>·</span><a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CAR DETAIL MODAL ============ -->
+<div class="modal" id="carModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="document">
+    <button class="modal__close" type="button" data-close aria-label="Close details">
+      <svg class="ic"><use href="#i-close"/></svg>
+    </button>
+
+    <div class="modal__media">
+      <img id="modalImg" src="assets/images/car-lamborghini-revuelto.jpg" alt="" width="1600" height="1000" />
+      <div class="modal__media-glow" id="modalGlow"></div>
+      <span class="modal__badge" id="modalBadge">NEW</span>
+      <div class="modal__colors">
+        <span class="modal__colors-k">Available Colours</span>
+        <div class="swatches" id="modalSwatches"></div>
+      </div>
+    </div>
+
+    <div class="modal__body">
+      <div class="modal__head">
+        <div>
+          <span class="modal__brand" id="modalBrand">LAMBORGHINI</span>
+          <h2 class="modal__title" id="modalTitle">Revuelto</h2>
+          <p class="modal__tagline" id="modalTagline"></p>
+        </div>
+        <div class="modal__price">
+          <span>Ex-showroom</span>
+          <strong id="modalPrice">₹8.89 Cr</strong>
+        </div>
+      </div>
+
+      <div class="modal__stats" id="modalStats"></div>
+
+      <div class="modal__cols">
+        <div class="modal__col">
+          <h4>Engine &amp; Performance</h4>
+          <dl class="spec-list" id="modalSpecs"></dl>
+        </div>
+        <div class="modal__col">
+          <h4>Interior</h4>
+          <ul class="tick-list" id="modalInterior"></ul>
+        </div>
+        <div class="modal__col">
+          <h4>Safety</h4>
+          <ul class="tick-list" id="modalSafety"></ul>
+        </div>
+      </div>
+
+      <div class="modal__foot">
+        <a href="#test-drive" class="btn btn--neon" data-close><span>Book a Test Drive</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <button class="btn btn--ghost" type="button" id="modalCompare"><svg class="ic ic--s"><use href="#i-compare"/></svg><span>Add to Compare</span></button>
+        <button class="btn btn--ghost" type="button" id="modalCloseBtn"><span>Close</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SEARCH MODAL ============ -->
+<div class="modal modal--search" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="searchTitle" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="search-panel" role="document">
+    <button class="modal__close" type="button" data-close aria-label="Close search">
+      <svg class="ic"><use href="#i-close"/></svg>
+    </button>
+    <h2 class="sr-only" id="searchTitle">Search the collection</h2>
+    <div class="search-field">
+      <svg class="ic"><use href="#i-search"/></svg>
+      <input id="searchInput" type="search" placeholder="Search by brand, model or fuel type…" autocomplete="off" />
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="toast__ico"><svg class="ic"><use href="#i-check"/></svg></span>
+  <span class="toast__txt" id="toastTxt"></span>
+</div>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg class="ic"><use href="#i-up-right"/></svg>
+</button>
+
+<!-- Three.js + addons are vendored locally for offline reliability -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.js",
+    "three/addons/": "./vendor/addons/"
+  }
+}
+</script>
+<script type="module" src="script.js"></script>
+</body>
+</html>
